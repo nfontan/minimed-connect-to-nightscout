@@ -245,6 +245,7 @@ var Client = exports.Client = function (options) {
           if (resp && resp.data && resp.data.blePereodicDataEndpoint) {
             dataRetrievalUrl = resp.data.blePereodicDataEndpoint;
           }
+          dataRetrievalUrl = 'https://clcloud.minimed.eu/connect/carepartner/v5/display/message' // HOTFIX
           if(dataRetrievalUrl) {
                 logger.log('GET data (as carepartner) ' + dataRetrievalUrl);
                 var body = {
